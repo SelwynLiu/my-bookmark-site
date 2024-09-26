@@ -248,7 +248,8 @@ function handleEdit(event) {
 
 // 保存按钮点击事件
 function handleSave(event) {
-    const ooookmarkItem = event.target.closest('.bookmark-item');
+    
+    const bookmarkItem = event.target.closest('.bookmark-item');
     const bookmarkName = bookmarkItem.querySelector('.bookmark-name');
     const bookmarkLink = bookmarkItem.querySelector('.bookmark-name-link');
     const bookmarkId = event.target.dataset.id; // 获取书签的文档 ID
