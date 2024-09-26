@@ -1,0 +1,124 @@
+/* style.css */
+
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#auth-container {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+}
+
+#bookmark-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button.save-bookmark {
+    display: none; /* 默认情况下隐藏保存按钮 */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container {
+    margin: 20px 0;
+}
+
+#bookmark-list {
+    margin: 20px 0;
+}
+
+.bookmark-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between; /* 调整布局，使内容分布更加合理 */
+}
+
+.bookmark-item h3 {
+    margin: 0;
+}
+.bookmark-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+.bookmark-item a:hover {
+    text-decoration: underline;
+}
+
+.bookmark-item h3[contenteditable="true"] {
+    background-color: #f0f0f0;
+    outline: 1px solid #007bff;
+}
+
+.bookmark-item a[contenteditable="true"] {
+    background-color: #f0f0f0;
+    outline: 1px solid #007bff;
+}
+
+.bookmark-favicon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.bookmark-name {
+    user-select: auto; /* 确保文本可选 */
+    pointer-events: auto; /* 确保元素可点击 */
+    cursor: text; /* 鼠标指针变成文本选择模式 */
+}
+
+.bookmark-name-link {
+    text-decoration: none; /* 去掉默认下划线 */
+}
+
+.bookmark-name-link:hover .bookmark-name {
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
+
+.bookmark-name[contenteditable="true"] {
+    border: 1px solid #ccc; /* 添加边框以显示编辑状态 */
+    background-color: #f9f9f9; /* 设置背景颜色 */
+    outline: none; /* 去掉默认的聚焦效果 */
+}
+
+/* 编辑状态下禁用链接点击 */
+.bookmark-item.editing .bookmark-name-link {
+    pointer-events: none;
+    color: #aaa; /* 可选：灰色显示禁用状态 */
+}
